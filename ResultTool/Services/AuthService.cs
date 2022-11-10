@@ -1,5 +1,6 @@
 ﻿using ResultTool.Entities;
 using ResultTool.ResultTool;
+using ResultTool.ResultTool.AuthResult;
 using ResultTool.ResultTool.Common;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace ResultTool.Services
 
             if (false) return new AuthResult(false);
 
-            return new AuthResult(true);
+            return new AuthResult(true,"Register success");
         }
 
         public IAuthResult Login(string userName, string password)
@@ -26,7 +27,10 @@ namespace ResultTool.Services
 
             if (false) return new AuthResult(false);
 
-            return new AuthResult(true);
+            return new AuthResult(true, "Login success")
+            {
+                Token = "Access Token"
+            };
         }
     }
 }

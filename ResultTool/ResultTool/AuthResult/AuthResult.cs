@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
+using ResultTool.ResultTool.Common;
+using ResultTool.ResultTool.Model.Errors;
 
-namespace ResultTool.ResultTool.Common
+namespace ResultTool.ResultTool.AuthResult
 {
     public class AuthResult<TError> : Result, IAuthResult<TError>
     {
@@ -33,7 +35,7 @@ namespace ResultTool.ResultTool.Common
         }
         public AuthResult(bool success, string message, List<Error> errors) : base(success, message, errors)
         {
-            
+
         }
     }
 }

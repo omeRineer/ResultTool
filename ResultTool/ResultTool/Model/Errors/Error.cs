@@ -1,4 +1,4 @@
-﻿namespace ResultTool.ResultTool.Common
+﻿namespace ResultTool.ResultTool.Model.Errors
 {
     public class Error
     {
