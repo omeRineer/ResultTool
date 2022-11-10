@@ -8,9 +8,8 @@ namespace ResultTool
     {
         static void Main(string[] args)
         {
-            var userService=new UserService();
-            User user = new User { Id=1, FirstName = "Software", LastName = "Developer", Phone = "01324567845" };
-            var result = userService.CreateUser(user);
+            var userService = new AuthService();
+            var result = userService.Register("Ömer", "omer", "234");
             Console.WriteLine(result.Message);
         }
     }
